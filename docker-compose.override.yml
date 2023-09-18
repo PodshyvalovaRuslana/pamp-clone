@@ -1,4 +1,7 @@
 services:
+  mariadb:
+    volumes:
+      - /home/podshivalova/docker-databases/pamp-clone:/var/lib/mysql
   php:
     image: wodby/drupal:$DRUPAL_TAG
     environment:
@@ -16,6 +19,10 @@ services:
   nginx:
     volumes:
     - codebase:/var/www/html
+
+  traefik:
+    ports:
+      - "80:80"
 
 #  webgrind:
 #    volumes:

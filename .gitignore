@@ -52,3 +52,6 @@ report.*.json
 
 #jetbrains
 .idea
+
+# local settings
+docker-compose.override.yml
